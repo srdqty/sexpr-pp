@@ -1,0 +1,8 @@
+(let-syntax
+  (
+      (thunk  (lambda (stx)
+                    (mk-stx (list (syntax lambda) (syntax (a))
+                                            (car (cdr (stx-e stx))))
+                                          stx)))
+        )
+    ((thunk (+ 1 2)) 0))

@@ -1,0 +1,22 @@
+a
+a
+(a b)
+()
+(a b c)
+(f a)
+(f a)
+(f (+ a b))
+(f a)
+(f . a)
+(f a + b)
+a
+(#%bracket-app a)
+(#%bracket-app . a)
+(#%bracket-app a + b)
+(#%bracket-app f a)
+(#%bracket-app f . a)
+(#%bracket-app f a + b)
+((f (+ 5 4)) a b)
+(f (a b))
+(f)
+<eof>

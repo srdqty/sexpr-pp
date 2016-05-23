@@ -1,0 +1,12 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+  ../../value/value-sig.mlb
+  ../ast/ast-sig.mlb
+  
+  ../../or-error/or-error.mlb
+
+  compiler.sig
+in
+  signature COMPILER
+end

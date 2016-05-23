@@ -1,0 +1,20 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+  ../../value/value-sig.mlb
+  ../../compiler/ast/ast-sig.mlb
+
+  ../eval-env/eval-env.mlb
+
+  ../link-table/link-table-sig.mlb
+  ../../expander/expand-env/expand-env-sig.mlb
+  
+  ../../result/result.mlb
+  ../../or-error/or-error.mlb
+
+  eval.sig
+  eval.fun
+in
+  signature EVAL
+  functor EvalFn
+end

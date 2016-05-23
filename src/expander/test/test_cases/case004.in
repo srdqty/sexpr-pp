@@ -1,0 +1,12 @@
+(lambda (x)
+  (let-syntax (
+    (n  (lambda (stx)
+          ; expand (n e) to (lambda (x) (+ e x))
+          (mk-stx
+            (list (syntax lambda) (syntax (x))
+              (mk-stx
+                (list (syntax +) (car (cdr (stx-e stx))) (syntax x))
+                stx))
+            stx)))
+    )
+    (n 1)))

@@ -1,0 +1,128 @@
+= sexpr-pp - Symbolic Expression Pre-Processor
+
+An interpreter for a Scheme-like language that features an implementation
+(currently only partially) of an advanced macro system.
+
+== Running the Interpreter
+
+=== Dependencies
+
+* http://www.mlton.org[MLton]
+
+=== Building
+
+At the root directory, simply execute `make`. The interpreter executable
+`sexpr-repl` will be compiled and copied to the root directory. The examples
+directory contains files that can be loaded with the `load` and `load-syntax`
+forms. Various examples of what the interpreter is capable of are included.
+
+== What This Software Is
+
+The purpose of this software is to implement the macro system described
+by the paper http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.307.883[Macros that Work Together]
+(http://www.eecs.northwestern.edu/~robby/pubs/papers/jfp2012-fcdf.pdf[pdf]).
+
+Right now there is a basic REPL that implements the compile-time bindings
+and partial expansion features described in the paper. The model from the
+paper is extended to support defining global variables, global macro
+definitions, and the loading of files containing expressions to be executed.
+The interpreter also extends the expander from the model to support
+the full language in the definition of macros. This is accimplished 
+by a "phase tower" that implements separate instances of the interpreter
+state for each "phase" of the expansion process.
+
+* Forms Evaluated at Phase `0`: Forms entered directly by the REPL and subforms
+  that do not modify the phase number.
+* Forms Evaluated at Phase `N+1`: 
+** Forms evaluated on the right side of a macro definition binding
+   (via `define-syntax` or `let-syntax`)
+   that appears in a form at phase `N`
+** Forms evaluated inside a `begin-for-syntax` form body.
+
+== What This Software Will Be
+
+Eventually the interpreter will serve as the basis for an s-expression
+pre-processing library. The library will support defining and executing
+macros written in a Scheme-like language. The pre-processor will not
+make any requirements on what the base s-expression data describes.
+So while macros will be written in Scheme, the input s-expression (other than the macro definition forms) 
+and output s-expression of the pre-processor can
+describe an arbritrary programming language or data.
+
+== The Core Forms And Functions Implemented
+
+=== Top Level Forms:
+
+----
+(define <identifier> <expression>)) <1>
+(define-syntax <identifier> <expression>) <2>
+(begin <top-level-form>*) <3>
+(begin-for-syntax <expression>*) <4>
+<expression> <5>
+----
+<1> Binds a global identifier to the value of the expression.
+<2> Binds a global identifier in the expansion environment to 
+    the value of the expression (evaluated one phase higher than
+    the current phase)
+<3> A way to group top-level forms into a single form. The forms
+    are executed in sequence and the value returned by the final
+    form is the value of the begin form.
+<4> The same as the begin form, except all the inner forms are
+    executed one phase higher than the current phase. Can be
+    nested to execute forms at arbritrarily higher phases.
+<5> An expression.
+
+=== Expression Forms:
+
+----
+(letrec ((<identifier> <expression>)*) <expression>+) <1>
+(lambda (<identifier>+) <expression>+) <2>
+(lambda <identifier> <expression>+) <3>
+(lambda (<identifier>+ . <identifier>) <expression>+) <4>
+(if <expression> <expression> <expression>) <5>
+(begin <expression>+) <6>
+(let-synax ((<identifer> <expression>)*) <expression>+) <7>
+(quote <expression>) <8>
+(syntax <expression>) <9>
+----
+<1> Bind expressions to the identifiers in the binding list. The bindings
+    are visible in the body of the letrec form in addition to the right
+    hand side expressions of the bindings themselves. This form enables
+    the definition of recursive functions.
+<2> Define a function with the exact arity of the number of identifers
+    in the parameter list.
+<3> Define a function with a minimum arity of 0. The arguments will be
+    concatentated into a list and bound to the identifier in the body
+    of the function.
+<4> Define a function with a minimum arity corresponding to the number
+    identifiers before the dot. The remaining arguments will be concatenating
+    into a list and bound to the final identifier in the body of the function.
+<5> Execute the first expression, and choose to execute the third
+    expression if it evaluates to false and the second expression otherwise.
+<6> Execute expressions in the body in order, evaluated to the value of
+    the last expression.
+<7> Locally bind a compile-time value (macro definitions).
+<8> Evaluates to the literal expression.
+<9> Evaluates to a syntax object of the literal expression.
+ 
+=== Core Functions Implemented
+
+To be written. For now, check out
+`src/top-level/core-functions/core-functions.fun`.
+
+== TODO
+
+.Short Term
+* Finish describing Core Functions in the README
+* More tests (interpreter runs, but probably has many errors)
+* Add more examples that demonstrate general compile-time bindings
+  and partial expansion
+* Implement definition contexts
+* Implement support for actual pre-processing and not just a REPL
+
+.Long Term
+* Improve interpreter implementation (byte code instead of executing asts, etc)
+* Implement support for reading http://readable.sourceforge.net/[Readable S-Expressions]
+* Implement support for macros based on these papers
+** http://www.cs.utah.edu/plt/publications/macromod.pdf[Composable and Compilable Macros: You Want it When?]
+** http://www.cs.utah.edu/plt/publications/gpce13-f-color.pdf[Submodules in Racket: You Want it When, Again?]

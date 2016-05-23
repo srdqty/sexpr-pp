@@ -1,0 +1,9 @@
+(let-syntax
+(
+  (x (lambda (stx) (syntax 1)))
+)
+  (let-syntax
+  (
+    (x (lambda (stx) (syntax (x))))
+  )
+    (x)))

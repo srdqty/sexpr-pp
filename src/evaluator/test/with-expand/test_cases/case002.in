@@ -1,0 +1,4 @@
+((lambda (x)
+  (let-syntax ((m (lambda (stx) (syntax x))))
+    (lambda (x) (+ (m) x))))
+  1)

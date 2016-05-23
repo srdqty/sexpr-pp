@@ -1,0 +1,15 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+  ../../expander/expander/expander-sig.mlb
+  ../../or-error/or-error.mlb
+  ../../reader/reader-sig.mlb
+  ../../compiler/compiler/compiler-sig.mlb
+  ../../evaluator/eval/eval-sig.mlb
+
+  expand-compile-eval.sig
+  expand-compile-eval.fun
+in
+  signature EXPAND_COMPILE_EVAL
+  functor ExpandCompileEvalFn
+end

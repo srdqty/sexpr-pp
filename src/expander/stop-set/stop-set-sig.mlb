@@ -1,0 +1,9 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+  ../../symbol-table/symbol-sig.mlb
+
+  stop-set.sig
+in
+  signature STOP_SET
+end

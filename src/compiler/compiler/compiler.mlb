@@ -1,0 +1,19 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+  ../../value/value-sig.mlb
+  ../ast/ast-sig.mlb
+  ../../symbol-map/symbol-map-sig.mlb
+  
+  ../../or-error/or-error.mlb
+
+  compiler.sig
+
+
+  ../compile-env/compile-env.mlb
+  ../id-to-index-map/id-to-index-map.mlb
+  compiler.fun
+in
+  signature COMPILER
+  functor CompilerFn
+end

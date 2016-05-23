@@ -1,0 +1,12 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+  $(SML_LIB)/smlnj-lib/Util/smlnj-lib.mlb
+
+  ../../symbol-table/symbol-sig.mlb
+
+  stop-set.sig
+  stop-set.fun
+in
+  signature STOP_SET
+  functor StopSetFn
+end

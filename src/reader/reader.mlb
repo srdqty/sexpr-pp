@@ -1,0 +1,15 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+  ../lexer/lexer-sig.mlb
+  datum-constructor-sig.mlb
+
+  ../or-error/or-error.mlb
+  reader.sig
+  reader.fun
+in
+  signature DATUM_CONSTRUCTOR
+  signature READER
+  
+  functor ReaderFn
+end

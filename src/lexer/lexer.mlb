@@ -1,0 +1,14 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+  ../stack/stack.mlb
+  ../or-error/or-error.mlb
+
+  text-input-port.sig
+  text-input-port.fun
+
+  lexer.sig
+  lexer.fun
+in
+  signature LEXER
+  structure Lexer
+end

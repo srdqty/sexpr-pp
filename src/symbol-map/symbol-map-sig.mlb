@@ -1,0 +1,11 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+  ../symbol-table/symbol-sig.mlb
+
+  ../or-error/or-error.mlb
+
+  symbol-map.sig
+in
+  signature SYMBOL_MAP
+end

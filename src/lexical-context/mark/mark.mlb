@@ -1,0 +1,9 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+  mark.sig
+  mark.fun
+in
+  signature MARK
+  functor MarkFn
+end

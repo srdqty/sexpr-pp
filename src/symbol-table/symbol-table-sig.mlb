@@ -1,0 +1,8 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+  symbol.sig
+  symbol-table.sig
+in
+  signature SYMBOL_TABLE
+end

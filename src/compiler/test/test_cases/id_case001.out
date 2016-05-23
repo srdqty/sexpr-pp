@@ -1,0 +1,2 @@
+(FunFixArity (Arity = 2) (ShallowRef 0) (ShallowRef 1))
+(FunFixArity (Arity = 2) (FunFixArity (Arity = 2) (ShallowRef 0) (DeepRef 1 1) (ShallowRef 1)))

@@ -1,0 +1,10 @@
+#| Individual expressions have independent global variable name mappings |#
+x
+y
+z
+(+ x y z)
+(lambda ()
+  x
+  y
+  z
+  (+ x y z))

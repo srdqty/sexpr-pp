@@ -1,0 +1,7 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+  ../or-error/or-error.mlb
+  datum-constructor.sig
+in
+  signature DATUM_CONSTRUCTOR
+end

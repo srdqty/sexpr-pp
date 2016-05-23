@@ -1,0 +1,12 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+
+  ../../value/value-sig.mlb
+  
+  ../../or-error/or-error.mlb
+
+  link-table.sig
+in
+  signature LINK_TABLE
+end

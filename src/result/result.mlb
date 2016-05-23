@@ -1,0 +1,9 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+  result.sig
+  result.fun
+in
+  signature RESULT
+  structure Result
+end

@@ -1,0 +1,28 @@
+(let-syntax
+(
+  (or 
+    (lambda (stx)
+      (letrec
+      (
+        (first-arg (car (cdr (stx-e stx))))
+        (second-arg (car (cdr (cdr (stx-e stx)))))
+        (binding (mk-stx
+                    (list (syntax it) first-arg)
+                    stx))
+      )
+        (mk-stx
+          (list (syntax letrec)
+                (mk-stx (list binding) stx)
+                (mk-stx
+                  (list (syntax if)
+                        (syntax it)
+                        (syntax it)
+                        second-arg)
+                  stx))
+          stx)
+      )
+    ))
+)
+  (letrec
+    ((it #f))
+    (or it 3)))

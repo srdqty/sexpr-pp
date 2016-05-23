@@ -1,0 +1,52 @@
+; a comment #|
+#| another comment
+  #|#| nested |#|# |||
+  |abc | #
+
+  |#
+#;#;(a b c . d)
+!#$%^&*asymbol~.#()    ;a comment #|
+
+; adskjfakjflkj 
++12_98___76_5_4_321__0__(
+-12_98___76_5_4_321__0__)
++_12_98___76_5_4_321__0__ 
+-_12_98___76_5_4_321__0__ 
+
+; line comment
++_ 
+-_ 
+_ ++12_98___76_5_4_321__0_"abc"_
+--12_98___76_5_4_321__0__;#|ok#|
+_12_98___76_5_4_321__0__
++_____123ab
+123_456_abc
+1234567890abc
+...#
+ 
+#\a(#\b)#\tab #\newline #\space 
+#\  whatever)
+#\#;abc
+#\;"def"
+#\@ 
+#\( #\)(#\ )#\  #\  #\ 
+#\-; comment
+= + - _
+"!@#$%^&*()    ~ abcdefghijklmnopqrstuvwxyz\\;\n\t\r\"
+ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-+="
+#\a
+
+  @abc 45 #\abc #\^ 123#\newline @ 
+abc@ @dude #\x34a654 #(# #
+#|
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+space for further expansion******************************************
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+*********************************************************************
+*********************************************************************
+*********************************************************************
+*********************************************************************
+|#
+#\b

@@ -1,0 +1,11 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+  ../../value/value-sig.mlb
+  ../../interpreter-state/phase-state/phase-state-sig.mlb
+  ../../interpreter-state/interpreter-state/interpreter-state-types-sig.mlb
+
+  core-functions.sig
+in
+  signature CORE_FUNCTIONS
+end

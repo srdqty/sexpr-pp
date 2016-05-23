@@ -1,0 +1,9 @@
+(lambda (x)
+  (let-syntax
+  (
+    (y  (lambda (stx)
+          (car (cdr (stx-e stx)))))
+    (z (lambda (stx) (syntax x)))
+  )
+    (lambda (x)
+      ((y (z)) 1 2 3 4))))

@@ -1,0 +1,13 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+  ../../value/value-sig.mlb
+  ../../interpreter-state/interpreter-state/interpreter-state-types-sig.mlb
+  ../stop-set/stop-set-sig.mlb
+
+  ../../or-error/or-error.mlb
+
+  expander.sig
+in
+  signature EXPANDER
+end

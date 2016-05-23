@@ -1,0 +1,13 @@
+local
+  ../symbol-table/symbol-sig.mlb
+  
+  ../or-error/or-error.mlb
+  $(SML_LIB)/basis/basis.mlb
+  $(SML_LIB)/smlnj-lib/Util/smlnj-lib.mlb
+
+  symbol-map.sig
+  symbol-map.fun
+in
+  signature SYMBOL_MAP
+  functor SymbolMapFn
+end

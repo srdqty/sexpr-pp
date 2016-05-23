@@ -1,0 +1,16 @@
+(let-syntax
+(
+  (public (lambda (e) (syntax syntax-error)))
+)
+  (let-syntax
+  (
+    (class (lambda (e)
+            (letrec
+            (
+              (e2 (local-expand (car (cdr (stx-e e))) (list (syntax public))))
+            )
+              (car (cdr (stx-e e2))))))
+  )
+    (class (public 8))
+  )
+)

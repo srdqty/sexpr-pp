@@ -1,0 +1,8 @@
+(letrec (
+  (x (lambda () (y)))
+  (y (lambda () (x)))
+  )
+  (x)
+  (y)
+  )
+(letrec () 5)

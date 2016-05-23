@@ -1,0 +1,11 @@
+(let-syntax
+(
+  (x 5)
+)
+  (let-syntax
+  (
+    (y (lambda (stx) (display (syntax-local-value (syntax x))) (syntax 3)))
+  )
+    (y)
+  )
+)

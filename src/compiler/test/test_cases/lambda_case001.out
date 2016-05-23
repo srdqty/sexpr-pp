@@ -1,0 +1,7 @@
+(FunFixArity (Arity = 0) (Constant 5))
+(FunVarArity (Arity >= 0) (ShallowRef 0))
+(FunFixArity (Arity = 1) (ShallowRef 0))
+(FunFixArity (Arity = 2) (ShallowRef 0) (ShallowRef 1))
+(FunVarArity (Arity >= 1) (ShallowRef 0) (ShallowRef 1))
+(FunVarArity (Arity >= 2) (ShallowRef 0) (ShallowRef 1) (ShallowRef 2))
+(FunFixArity (Arity = 3) (FunFixArity (Arity = 3) (FunFixArity (Arity = 3) (DeepRef 2 0) (DeepRef 2 1) (DeepRef 2 2) (DeepRef 1 0) (DeepRef 1 1) (DeepRef 1 2) (ShallowRef 0) (ShallowRef 1) (ShallowRef 2))))

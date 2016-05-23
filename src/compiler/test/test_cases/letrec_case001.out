@@ -1,0 +1,2 @@
+(Letrec 2 ((FunFixArity (Arity = 0) (App (DeepRef 1 1) (ArgCount 0) (Args ))) (FunFixArity (Arity = 0) (App (DeepRef 1 0) (ArgCount 0) (Args )))) (App (ShallowRef 0) (ArgCount 0) (Args )) (App (ShallowRef 1) (ArgCount 0) (Args )))
+(Letrec 0 () (Constant 5))

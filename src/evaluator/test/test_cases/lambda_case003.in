@@ -1,0 +1,6 @@
+((lambda (x y . z) x) 1 2 3 4 5 6 7)
+((lambda (x y . z) y) 1 2 3 4 5 6 7)
+((lambda (x y . z) z) 1 2 3 4 5 6 7)
+(((lambda (x y) (lambda (z) x)) 1 2) 3)
+(((lambda (x y) (lambda (z) y)) 1 2) 3)
+(((lambda (x y) (lambda (z) z)) 1 2) 3)

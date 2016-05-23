@@ -1,0 +1,8 @@
+$(SML_LIB)/basis/basis.mlb
+
+../../result/result.mlb
+../../error/error.mlb
+../../or-error/or-error.mlb
+../lexer.mlb
+
+lex_test.sml

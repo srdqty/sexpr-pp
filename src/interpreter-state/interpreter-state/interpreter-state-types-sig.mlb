@@ -1,0 +1,10 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+  ../tower/tower-sig.mlb
+  ../phase-state/phase-state-sig.mlb
+
+  interpreter-state-types.sig
+in
+  signature INTERPRETER_STATE_TYPES
+end

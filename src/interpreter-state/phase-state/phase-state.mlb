@@ -1,0 +1,13 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+  ../../value/value-sig.mlb
+  ../../evaluator/link-table/link-table-sig.mlb
+  ../../expander/expand-env/expand-env.mlb
+
+  phase-state.sig
+  phase-state.fun
+in
+  signature PHASE_STATE
+  functor PhaseStateFn
+end

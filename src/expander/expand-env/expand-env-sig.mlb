@@ -1,0 +1,10 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+  ../../lexical-context/lexical-context/lexical-context-sig.mlb
+  ../../symbol-table/symbol-sig.mlb
+
+  expand-env.sig
+in
+  signature EXPAND_ENV
+end

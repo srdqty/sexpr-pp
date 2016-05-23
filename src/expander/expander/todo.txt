@@ -1,0 +1,3 @@
+* extract the actual ctx and srcloc from each binding stx object in letrec
+  and put them back into the expanded bindings
+* Implement check duplicate

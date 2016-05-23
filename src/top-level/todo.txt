@@ -1,0 +1,8 @@
+* Add a pre-processor in addition to a repl.
+  The pre-processor reads in syntax and outputs raw s-expressions with
+  the identifiers renamed.
+  
+  Input to the pre-processor should be: 
+    * A stop set of identifiers for the core forms of the pre-processed s-expressions.
+    * Definitions of macros for each identifier in the stop set so that
+      core forms can be expanded as well.

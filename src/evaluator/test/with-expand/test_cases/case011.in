@@ -1,0 +1,15 @@
+(let-syntax
+(
+  (stop (lambda (e) (car (cdr (stx-e e)))))
+)
+  (let-syntax
+  (
+    (ex (lambda (e) 
+          (local-expand (car (cdr (stx-e e)))
+                                  (list (syntax stop)))))
+  )
+    (ex (lambda (x) (let-syntax
+                    (
+                      (arg (lambda (e) (syntax (stop x))))
+                    )
+                    (arg))))))

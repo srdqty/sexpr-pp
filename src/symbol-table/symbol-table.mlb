@@ -1,0 +1,14 @@
+local
+  $(SML_LIB)/smlnj-lib/Util/smlnj-lib.mlb
+  $(SML_LIB)/basis/basis.mlb
+  $(SML_LIB)/basis/mlton.mlb
+
+  symbol.sig
+  symbol-table.sig
+
+  symbol-table.fun
+in
+  signature SYMBOL
+  signature SYMBOL_TABLE
+  functor SymbolTableFn
+end

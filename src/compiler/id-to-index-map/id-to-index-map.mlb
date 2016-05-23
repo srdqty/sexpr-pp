@@ -1,0 +1,13 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+  ../../symbol-table/symbol-sig.mlb
+
+  ../../symbol-map/symbol-map-sig.mlb
+
+  id-to-index-map.sig
+  id-to-index-map.fun
+in
+  signature ID_TO_INDEX_MAP
+  functor IdToIndexMapFn
+end

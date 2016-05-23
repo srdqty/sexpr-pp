@@ -1,0 +1,8 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+  stack.sig
+  stack.fun
+in
+  signature STACK
+  structure Stack
+end

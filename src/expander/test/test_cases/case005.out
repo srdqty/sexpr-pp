@@ -1,0 +1,2 @@
+>> (letrec ((even?0 (lambda (x1) (if (= 0 x1) #t (odd?0 (- x1 1))))) (odd?0 (lambda (x0) (if (= 0 x0) #f (even?0 (- x0 1)))))) (even?0 1) (odd?0 2) (even?0 3) (odd?0 5))
+>> 

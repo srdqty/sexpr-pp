@@ -1,0 +1,7 @@
+(lambda () 5)
+(lambda a a)
+(lambda (a) a)
+(lambda (a b) a b)
+(lambda (a . b) a b)
+(lambda (a b . c) a b c)
+(lambda (a b c) (lambda (d e f) (lambda (g h i) a b c d e f g h i)))

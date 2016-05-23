@@ -1,0 +1,2 @@
+>> (begin (letrec ((it0 #f)) (letrec ((it1 it0)) (if it1 it1 3))))
+>> 

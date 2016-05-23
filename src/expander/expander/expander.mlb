@@ -1,0 +1,17 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+  ../../value/value-sig.mlb
+  ../../interpreter-state/interpreter-state/interpreter-state-types-sig.mlb
+  ../../compiler/compiler/compiler-sig.mlb
+  ../../evaluator/eval/eval-sig.mlb
+  ../stop-set/stop-set.mlb
+
+  ../../or-error/or-error.mlb
+
+  expander.sig
+  expander.fun
+in
+  signature EXPANDER
+  functor ExpanderFn
+end

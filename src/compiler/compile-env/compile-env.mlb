@@ -1,0 +1,11 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+  ../../symbol-table/symbol-sig.mlb
+
+  compile-env.sig
+  compile-env.fun
+in
+  signature COMPILE_ENV
+  functor CompileEnvFn
+end

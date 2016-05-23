@@ -1,0 +1,11 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+  ../../or-error/or-error.mlb
+
+  eval-env.sig
+  eval-env.fun
+in
+  signature EVAL_ENV
+  structure EvalEnv
+end

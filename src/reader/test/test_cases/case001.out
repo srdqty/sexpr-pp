@@ -1,0 +1,17 @@
+()
+1234
+"hello world\n"
+#\newline
+#\space
+#\tab
+#\#
+#\;
+#\|
+(a)
+(a b)
+(a . b)
+(a b c d e f g h i j k l m n o p q r s t u v w x y z)
+(a b c d)
+(a b c d . e)
+(a b c d . e)
+<eof>

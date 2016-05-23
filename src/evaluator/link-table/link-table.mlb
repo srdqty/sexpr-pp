@@ -1,0 +1,15 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+
+  ../../value/value-sig.mlb
+  ../../symbol-map/symbol-map-sig.mlb
+  
+  ../../or-error/or-error.mlb
+
+  link-table.sig
+  link-table.fun
+in
+  signature LINK_TABLE
+  functor LinkTableFn
+end

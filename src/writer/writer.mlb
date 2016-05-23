@@ -1,0 +1,11 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+  writer-datum.sig
+  writer.sig
+  writer.fun
+in
+  signature WRITER
+  signature WRITER_DATUM
+  functor WriterFn
+end

@@ -1,0 +1,12 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+  ../result/result.mlb
+  ../error/error.mlb
+
+  or-error.sig
+  or-error.fun
+in
+  signature OR_ERROR
+  structure OrError
+end

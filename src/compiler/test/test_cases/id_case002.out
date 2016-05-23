@@ -1,0 +1,5 @@
+(GlobalRef 0)
+(GlobalRef 0)
+(GlobalRef 0)
+(App (GlobalRef 0) (ArgCount 3) (Args (GlobalRef 1) (GlobalRef 2) (GlobalRef 3)))
+(FunFixArity (Arity = 0) (GlobalRef 0) (GlobalRef 1) (GlobalRef 2) (App (GlobalRef 3) (ArgCount 3) (Args (GlobalRef 0) (GlobalRef 1) (GlobalRef 2))))

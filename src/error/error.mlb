@@ -1,0 +1,9 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+  error.sig
+  error.fun
+in
+  signature ERROR
+  structure Error
+end

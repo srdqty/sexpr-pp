@@ -1,0 +1,12 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+  ../../symbol-table/symbol-sig.mlb
+  ../mark/mark-sig.mlb
+
+  lexical-context.sig
+  lexical-context.fun
+in
+  signature LEXICAL_CONTEXT
+  functor LexicalContextFn
+end

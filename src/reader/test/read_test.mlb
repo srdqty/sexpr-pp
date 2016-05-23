@@ -1,0 +1,11 @@
+$(SML_LIB)/basis/basis.mlb
+
+../../error/error.mlb
+../../result/result.mlb
+../../or-error/or-error.mlb
+../../lexer/lexer.mlb
+../reader.mlb
+
+../../writer/writer.mlb
+
+read_test.sml

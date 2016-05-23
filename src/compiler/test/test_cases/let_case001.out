@@ -1,0 +1,4 @@
+(Let 3 ((Constant 1) (Constant 2) (Constant 3)) (App (GlobalRef 0) (ArgCount 3) (Args (ShallowRef 0) (ShallowRef 1) (ShallowRef 2))))
+(App (FunFixArity (Arity = 3) (App (GlobalRef 0) (ArgCount 3) (Args (ShallowRef 0) (ShallowRef 1) (ShallowRef 2)))) (ArgCount 1) (Args (Constant 4)))
+(App (FunFixArity (Arity = 3) (App (GlobalRef 0) (ArgCount 3) (Args (ShallowRef 0) (ShallowRef 1) (ShallowRef 2)))) (ArgCount 2) (Args (Constant 4) (Constant 5)))
+(App (FunVarArity (Arity >= 1) (App (GlobalRef 0) (ArgCount 2) (Args (ShallowRef 0) (ShallowRef 1)))) (ArgCount 5) (Args (Constant 1) (Constant 2) (Constant 3) (Constant 4) (Constant 5)))

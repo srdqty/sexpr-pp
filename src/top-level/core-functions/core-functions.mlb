@@ -1,0 +1,21 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+
+  ../../value/value-sig.mlb
+
+  ../../interpreter-state/phase-state/phase-state-sig.mlb
+  ../../interpreter-state/interpreter-state/interpreter-state-types-sig.mlb
+  ../../evaluator/eval/eval-sig.mlb
+  ../../writer/writer-sig.mlb
+  ../../expander/expander/expander-sig.mlb
+
+  ../../result/result.mlb
+  ../../error/error.mlb
+  ../../or-error/or-error.mlb
+
+  core-functions.sig
+  core-functions.fun
+in
+  signature CORE_FUNCTIONS
+  functor CoreFunctionsFn
+end

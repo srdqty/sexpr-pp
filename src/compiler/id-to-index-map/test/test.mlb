@@ -1,0 +1,5 @@
+$(SML_LIB)/basis/basis.mlb
+../../../symbol-table/symbol-table.mlb
+../../../symbol-map/symbol-map.mlb
+../id-to-index-map.mlb
+test.sml

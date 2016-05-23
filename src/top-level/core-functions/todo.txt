@@ -1,0 +1,3 @@
+catch subscript exceptions and return an OrError.t value
+add printf
+add format
